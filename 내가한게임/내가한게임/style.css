@@ -1,0 +1,66 @@
+body{
+    margin: auto;
+    background-color: #e8f0fe;
+    color: #1a2a4a;
+}
+/* 네비게이션 - 스크롤해도 상단에 고정하기 위해 fixed 사용 
+   width: 100%는 fixed 사용시 너비가 줄어드는 문제를 방지하기 위해 사용 */
+nav{
+    background-color: #c5d8f8;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+/* ul 기본 패딩 제거를 위해 padding: 0 사용 */
+nav > ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+nav li{
+    display: inline-block;
+}
+nav a{
+    text-decoration: none;
+    color: #1a6fd4;
+    padding: 5px;
+    font-size: 160%;
+    margin: 10px;
+}
+nav a:hover{
+    background-color: #1a6fd4;
+    color: #ffffff;
+}
+/* overflow: hidden - float 된 이미지가 카드가 밖으로 삐져나오지 않게 하기 위해 사용 */
+.game-card{
+    background-color: #ffffff;
+    border: 1px solid #a0bce8;
+    overflow: hidden;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+/* float: left - 이미지 오른쪽에 텍스트가 오게 해서 카드형식처럼 만들기 위해 사용 */
+.game-card img{
+    float: left;
+    margin-right: 20px;
+    height: 250px;
+}
+.game-card a{
+    color: #1a6fd4;
+    text-decoration: none;
+}
+/* max-width - width 고정시 창 크기가 줄어들면 잘리는 문제가 생겨 max-width 사용 */
+#container{
+    max-width: 1500px;
+    margin: auto;
+    padding-top: 120px;
+}
+header{
+    text-align: center;
+}
+/* scroll-margin-top - 네비게이션 링크 클릭시 
+   고정된 네비게이션에 가려지지 않게 여백 확보를 위해 사용 */
+article{
+    scroll-margin-top: 90px;
+}
