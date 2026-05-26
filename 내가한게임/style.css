@@ -4,13 +4,15 @@ body{
     color: #1a2a4a;
 }
 /* 네비게이션 - 스크롤해도 상단에 고정하기 위해 fixed 사용 
-   width: 100%는 fixed 사용시 너비가 줄어드는 문제를 방지하기 위해 사용 */
+   width: 100%는 fixed 사용시 너비가 줄어드는 문제를 방지하기 위해 사용 
+   z-index: 100은 게임카드 마우스 오버시 위로 상승하는 에니메이션 때문에 메뉴가 가려지는 문제를 방지하기 위해 사용*/
 nav{
     background-color: #c5d8f8;
     padding: 5px;
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
 }
 /* ul 기본 패딩 제거를 위해 padding: 0 사용 */
 nav > ul{
@@ -39,6 +41,11 @@ nav a:hover{
     overflow: hidden;
     padding: 15px;
     margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+.game-card:hover{
+    box-shadow: 0 8px 20px rgba(26, 111, 212, 0.3);
+    transform: translateY(-5px);
 }
 /* float: left - 이미지 오른쪽에 텍스트가 오게 해서 카드형식처럼 만들기 위해 사용 */
 .game-card img{
